@@ -4,7 +4,7 @@ function getComputerChoice() {
     return choice[Math.floor(Math.random()*choice.length)];
 }
 
-function game(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
     computerSelection = getComputerChoice();
     if (playerSelection == '') {
@@ -32,4 +32,11 @@ function game(playerSelection, computerSelection) {
         message = console.log('Tie! Play again?')
     }
     return message;
+}
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+        playRound();
+    }
 }
