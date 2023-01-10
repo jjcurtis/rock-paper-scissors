@@ -18,12 +18,18 @@ function playRound() {
     console.log(`Player: ${playerSelection}`);
     console.log(`Computer: ${computerSelection}`);
 
-    if ((playerSelection == 'rock' & computerSelection == 'scissors') || (playerSelection == 'paper' & computerSelection == 'rock') || (playerSelection == 'scissors' & computerSelection == 'paper')) {
+    if ((playerSelection == 'rock' & computerSelection == 'scissors') || 
+    (playerSelection == 'paper' & computerSelection == 'rock') ||
+    (playerSelection == 'scissors' & computerSelection == 'paper')) {
         playerScore += 1;
-        message = console.log(`You win! ${playerSelection} beats ${computerSelection}`);
-    } else if ((playerSelection == 'rock' & computerSelection == 'paper') || (playerSelection == 'paper' & computerSelection == 'scissors') || (playerSelection == 'scissors' & computerSelection == 'rock')) {
+        message = console.log
+        (`You win! ${playerSelection} beats ${computerSelection}`);
+    } else if ((playerSelection == 'rock' & computerSelection == 'paper') ||
+    (playerSelection == 'paper' & computerSelection == 'scissors') ||
+    (playerSelection == 'scissors' & computerSelection == 'rock')) {
         computerScore += 1;
-        message = console.log(`You lose! ${computerSelection} beats ${playerSelection}`);
+        message = console.log
+        (`You lose! ${computerSelection} beats ${playerSelection}`);
     } else {
         message = console.log('Tie!')
     }
