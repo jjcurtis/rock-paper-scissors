@@ -5,9 +5,28 @@ function getComputerChoice() {
 }
 let playerScore = 0;
 let computerScore = 0;
+// let playerSelection;
+
+let rock = document.querySelector('.rock');
+rock.addEventListener('click', () => {
+    playerSelection = 'rock';
+    playRound();
+})
+
+let paper = document.querySelector('.paper');
+paper.addEventListener('click', () => {
+    playerSelection = 'paper';
+    playRound();
+})
+
+let scissors = document.querySelector('.scissors');
+scissors.addEventListener('click', () => {
+    playerSelection = 'scissors';
+    playRound();
+})
 
 function playRound() {
-    playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
+    // playerSelection = prompt('Rock, Paper, or Scissors?').toLowerCase();
     computerSelection = getComputerChoice();
     if (playerSelection == '') {
         message = console.log('Not interested in this game?')
