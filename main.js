@@ -7,8 +7,8 @@ function getComputerChoice() {
 let playerScore = 0;
 let computerScore = 0;
 let display = document.querySelector('.results');
-let choices = document.querySelector('.choices')
-let tally = document.querySelector('.score')
+let choices = document.querySelector('.choices');
+let tally = document.querySelector('.score');
 
 let rock = document.querySelector('.rock');
 rock.addEventListener('click', () => {
@@ -59,9 +59,11 @@ function playRound() {
 
     if (computerScore >= 5 & playerScore < computerScore)  {
         score = 'Game over. Computer wins';
-        return score;
+        choices.remove();
+        display.remove();
     } else if (playerScore >= 5 & computerScore < playerScore) {
         score = 'Congratulations! You win the game!';
-        return score;
+        choices.remove();
+        display.remove();
     }
 }
